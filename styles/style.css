@@ -134,11 +134,11 @@ main .listBookcard {
 }
 
 .listBookcard .filsafat {
-    background-image: url('../asset/teknologi.jpeg');
+    background-image: url('../asset/filsafat.jpg');
 }
 
 .listBookcard .sains {
-    background-image: url('../asset/teknologi.jpeg');
+    background-image: url('../asset/science.jpg');
     background-size: 160px;
     background-position-y: -4px;
 }
