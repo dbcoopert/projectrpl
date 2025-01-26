@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+    <lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login</title>
+
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif+Todhri&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+                *,
+                html {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                    font-family: 'Rubik', serif;
+                    letter-spacing: 1px;
+                }
+
+                body {
+                    background-color: #aaaa;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .container {
+                    position: relative;
+                    box-shadow: -5px 7px 10px 0 black;
+                    background-color: white;
+                    border-radius: 15px;
+                    width: 400px;
+                    height: 500px;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 1em;
+                }
+
+                .container a {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: .8em;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                .container form {
+                    position: relative;
+                    top: -.4em;
+                    width: 250px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .7em;
+                    flex-direction: column;
+                }
+
+                #formLogin img {
+                    width: 150px;
+                    border-radius: 50%;
+                }
+
+                #formLogin label {
+                    font-size: .75em;
+                }
+
+                .container .email,
+                .container .password {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                }
+
+                #err {
+                    color: red;
+                    position: absolute;
+                    bottom: 20px;
+                    font-size: .7em;
+                }
+
+                .container #login {
+                    margin-top: 20px;
+                }
+
+                .container #formLogin #em,
+                .container #formLogin #pass {
+                    padding: 15px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                }
+
+                button {
+                    height: 50px;
+                    width: 99%;
+                    background-color: rgb(0, 15, 43);
+                    color: white;
+                    border-radius: 10px;
+                    border: none;
+                    font-weight: bold;
+                    padding: 12px;
+                    cursor: pointer;
+                    transition: all .1s ease-in;
+                    
+                }
+
+                button:hover {
+                    transform: scale(1.1);
+                }
+
+                #login {
+                    position: relative;
+                    top: -17px;
+                }
+
+                #registrasi {
+                    /* border: 1px solid black; */
+                    width: 400px;
+                    height: 500px;
+                    position: relative;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: -5px 7px 15px 0 black;
+                    animation: anm 0.5s ease-in-out;
+                    transform: scale(1);
+                }
+
+                #container-reg {
+                    position: fixed;
+                    display: none;
+                    justify-content: center;
+                    z-index: 9999;
+                    align-items: center;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, .6);
+                }
+
+                #container-reg:target {
+                    display: flex;
+                }
+
+                @keyframes anm {
+                    0% {
+                        transform: scale(0);
+                    }
+
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+
+                #registrasi #back {
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    text-decoration: none;
+                }
+
+                #reg {
+                    width: 300px;
+                    height: 400px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                #regSub {
+                    border-radius: 0;
+                }
+
+                #reg div {
+                    text-align: center;
+                    width: 100%;
+                }
+
+                #reg input {
+                    width: 100%;
+                    padding: 10px;
+                    border-width: 0 0 1px 0;
+                }
+
+                #lupa-pass {
+                    font-size: .7em;
+                    text-align: right;
+                    width: 100%;
+                    color: blue;
+                    position: relative;
+                    top: -7px;
+                    cursor: pointer;
+                }
+            </style>
+        </head>
+        </style>
+</head>
+
+<body>
+
+    <div id="container-reg">
+        <div id="registrasi">
+            <a href="#" id="back">✖️</a>
+            <form id="reg">
+                <h2>REGISTRASI</h2>
+                <div>
+                    <input type="text" id="regName" placeholder="nama anda" required>
+                </div>
+                <div>
+                    <input type="text" id="regNim" placeholder="NIM anda" required>
+                </div>
+                <div>
+                    <input type="text" id="regUniv" placeholder="nama universitas" required>
+                </div>
+                <div>
+                    <input type="password" id="regPass" placeholder="buat password" required>
+                </div>
+                <div>
+                    <input type="password" id="regPassDua" placeholder="masukan ulang password" required>
+                </div>
+                <button type="submit" id="regSub">REGISTRASI</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <a href="#container-reg">registrasi?</a>
+        <form id="formLogin">
+            <img src="../asset/bumi-pustaka2.jpeg" alt="saka kebab">
+            <h3>BUMI PUSTAKA</h3>
+            <div class="email">
+                <label for="email"><i class="fa-solid fa-user"></i> NIM</label>
+                <input type="text" placeholder="NIM" id="em" required>
+            </div>
+            <div class="password">
+                <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+                <input type="password" id="pass" placeholder="password" required>
+            </div>
+            <span id="lupa-pass" onclick="lupaPass()">lupa password?</span>
+            <button type="submit" id="login">LOGIN</button>
+        </form>
+        <h5 id="err"></h5>
+    </div>
+
+    <script>
+        const dataReg = []
+
+        formLogin.addEventListener('submit', () => {
+            event.preventDefault()
+            const nimLog = dataReg.find(m => m.nim == em.value)
+            const passwordLog = dataReg.find(m => m.password == pass.value)
+
+            if (nimLog && passwordLog) {
+                window.open('../dashboard/kategori.html', '_blank')
+                err.style.display = 'none'
+            } else {
+                err.innerText = 'KATA SANDI ATAU EMAIL SALAH !!!'
+                err.style.display = 'inline'
+            }
+        })
+
+        reg.addEventListener('submit', (event) => {
+            event.preventDefault()
+            const dataNew = {
+                nama: regName.value,
+                nim: regNim.value,
+                univ: regUniv.value,
+                password: regPass.value,
+                passwordDua: regPassDua.value
+            }
+            localStorage.setItem('name', regName.value)
+            if (regName.value.length == 0 && regNim.value.length == 0 && regUniv.value.length == 0, regPass.value.length == 0, regPassDua.value.length == 0) {
+                alert('silahkan isi data terlebih dahulu')
+                return false
+            }
+
+            if(regPass.value !== regPassDua.value) {
+                alert('Password harus sama !!!!')
+                return false
+            }
+
+            dataReg.push(dataNew)
+            const cnt = document.getElementById('container-reg')
+            cnt.style.cursor = 'progress'
+            setTimeout(() => {
+                window.location.href = '#'
+            }, 300)
+        })
+
+        const lupaPass = () => {
+            dataReg.length === 0 ? alert('Anda belum registrasi, silahkan registrasi') : alert(`Password anda adalah ${JSON.stringify(dataReg[0].password)}`)
+        }
+    </script>
+</body>
+
+</html>

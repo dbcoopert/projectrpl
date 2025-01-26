@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Kategori Buku</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="opm">
+                <img src="../asset//bumi-pustaka2.jpeg" alt="sa">
+                <h2>Bumi Pustaka</h2>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#tentang" id="ttg"><i class="fa-solid fa-circle-info icon"></i><span>Tentang Kami</span></a></li>
+                    <li><a href="#" id="logout">logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Kategori Buku</h1>
+            <p id="sapa"></p>
+            <div class="listBookcard">
+                <div class="list filsafat"><a href="filsafat.html">FILSAFAT</a></div>
+                <div class="list sains"><a href="science.html">SCIENCE</a></div>
+                <div class="list ekonomi"><a href="ekonomi.html">EKONOMI & BISNIS</a></div>
+                <div class="list teknologi"><a href="teknologi.html">TEKNOLOGI</a></div>
+            </div>
+        </main>
+
+        <footer id="tentang">
+            <ul>
+                <h4>Owner :</h4>
+                <li><a href="mailto:asep.mardianto_ti23@nusaputra.ac.id"><i class="fa-solid fa-envelope"></i>Asep Mardianto</a></li>
+                <li><a href="mailto:peppy.parhani_ti23@nusaputra.ac.id"><i class="fa-solid fa-envelope"></i>Peppy Parhani
+                        Nopianti</a></li>
+                <li><a href="mailto:ahmad.ghifari_ti23@nusaputra.ac.id"><i class="fa-solid fa-envelope"></i>Ahmad Ghifari</a></li>
+                <li><a href="mailto:nasyid.naofal_ti23@nusaputra.ac.id"><i class="fa-solid fa-envelope"></i>Nasyid Naofal Putra</a>
+                </li>
+                <li><a href="mailto:rivan.suntela_ti23@nusaputra.acid"><i class="fa-solid fa-envelope"></i>Rivan Suntela</a></li>
+            </ul>
+            <div>
+                <p>&copy; 2025 Kelompok 6</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        const name = localStorage.getItem('name')
+
+        if(localStorage.length !== 0 && localStorage.getItem('name')) {
+        sapa.innerText = `Hallo ${name}, silahkan pilih kategori buku yang anda suka !!`
+        sapa.style.color = 'white'
+        } else {
+            sapa.innerText = `Hallo, silahkan pilih kategori buku yang anda suka !!`
+            sapa.style.color = 'white'
+        }
+
+        logout.addEventListener('click', () => {
+            const isLog = confirm('Apakah anda yakin ingin Logout?')
+            isLog ? window.location.href = '../index.html' : false
+        })
+
+    </script>
+</body>
+</html>

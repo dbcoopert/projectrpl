@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bumi Pustaka</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif+Todhri&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+        *,
+        html,
+        body {
+            margin: 0;
+            color: white;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            text-decoration: none;
+            font-family: 'Rubik', serif;
+        }
+
+        body {
+            background-color: rgb(0, 15, 43);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: yellow;
+            animation: hidup 2.2s infinite;
+        }
+
+        @keyframes hidup {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(5px);
+            }
+        }
+
+        .container .library {
+            display: flex;
+            width: 65%;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5em;
+        }
+
+        .container img {
+            width: 250px;
+            border-radius: 50%;
+        }
+
+        .container .library .intro {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        .container .library .intro p {
+            font-size: 1em;
+            text-align: justify;
+        }
+
+        .container .library .intro .btn {
+            display: flex;
+            justify-content: right;
+            margin-top: 8px;
+
+        }
+
+        .container .library .intro a {
+            background-color: white;
+            padding: 13px;
+            width: 190px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            color: rgb(0, 15, 43);
+            border: 1px solid transparent;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .container .library .intro a:hover {
+            background-color: rgb(0, 0, 27);
+            color: white;
+            border: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="library">
+            <img src="./asset/bumi-pustaka2.jpeg" alt="">
+            <div class="intro">
+                <h1>SELAMAT DATANG DI BUMI PUSTAKA</h1>
+                <p>Bumi Pustaka adalah aplikasi khusus yang dikembangkan untuk mendukung aktivitas di perpustakaan. Bumi
+                    pustaka hadir sebagai bagian dari inovasi digital untuk meningkatkan pengalaman mahasiswa dalam
+                    memanfaatkan fasilitas
+                    perpustakaan secara lebih efektif dan terorganisir. Sebagai platform modern, Bumi Pustaka dirancang
+                    agar sesuai dengan
+                    kebutuhan lingkungan akademik, dengan fokus pada kemudahan akses dan pengelolaan koleksi
+                    perpustakaan.
+                <div class="btn">
+                    <a href="./login/login.html">GABUNG</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
