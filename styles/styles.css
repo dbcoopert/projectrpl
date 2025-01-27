@@ -313,7 +313,7 @@ footer ul li a {
     font-size: .35em;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 433px) {
     header .opm {
         margin-left: 0;
         gap: 10px;
@@ -417,7 +417,7 @@ footer ul li a {
         #borrow-swg,
         #borrow-pltcs,
         #borrow-shphy {
-            left: 40%;
+            left: 39%;
             bottom: 18%;
         }
 }
