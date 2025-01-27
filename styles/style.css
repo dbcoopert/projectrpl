@@ -13,7 +13,8 @@ body {
 }
 
 .container {
-    height: fit-content;
+    height: 100vh;
+
 }
 
 .container header {
@@ -217,4 +218,73 @@ footer ul li a {
     color: gray;
     display: flex;
     gap: 8px;
+}
+
+@media screen and (max-width: 430px) {
+
+    header {
+        height: 5%;
+    }
+
+    header .opm {
+        margin: 0;
+    }
+
+    header .opm h2 {
+        font-size: .9em;
+    }
+
+    header nav {
+        width: 150px;
+    }
+
+    nav ul li {
+        font-size: .7em;
+    }
+
+    nav ul li #logout {
+        width: .4em;
+        padding: 6px;
+    }
+
+
+    body {
+        height: fit-content;
+    }
+
+    main {
+        height: 65%;
+        gap: 2em;
+    }
+
+    main .listBookcard {
+        flex-wrap: wrap;
+        height: 345px;
+    }
+
+    main .listBookcard .list {
+        width: 130px;
+        height: 130px;
+        justify-content: space-evenly;
+    }
+
+    footer {
+        height: 25%;
+    }
+
+    footer ul {
+        margin-left: 5px;
+        font-size: .7em;
+    }
+
+    footer ul li {
+        margin-top: 5px;
+        font-size: .8em;
+    }
+
+    footer div {
+        font-size: .8em;
+        width: 260px;
+    }
+
 }
