@@ -100,7 +100,7 @@ nav ul li #logout:hover {
 }
 
 main h1 {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
     color: black;
     /* border: 1px solid; */
@@ -112,8 +112,6 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 38px;
-    background-color: #aaaa;
 }
 
 main .listCard {
@@ -125,14 +123,15 @@ main .listCard {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2.2em;
-    padding-block: 4em;
+    padding-block: .7em;
     background-color: white;
+    margin-bottom: 2em;
 }
 
 main .card {
     width: 300px;
     height: 470px;
-    box-shadow: 5px 5px 10px 0 black;
+    box-shadow: 5px 5px 9px 0 black;
     transition: all 0.2s ease-in-out;
     background-color: whitesmoke;
 }
@@ -211,10 +210,11 @@ main .listCard .card a ul .desk {
     background-color: white;
     animation: anm .2s ease-in-out;
     position: relative;
+    border: 1px solid yellow;
 }
 
 .book span p {
-    font-size: .93em;
+    font-size: .91em;
 }
 
 span img {
@@ -301,7 +301,7 @@ footer ul li a {
     top: 1.5em;
     right: 0;
     font-size: 2em;
-    filter: drop-shadow(0 0 2px  black);
+    filter: drop-shadow(0 0 2px black);
 }
 
 #rate {
@@ -311,4 +311,109 @@ footer ul li a {
     left: -2.3em;
     top: -6px;
     font-size: .35em;
+}
+
+@media screen and (max-width: 430px) {
+    header .opm {
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    header .opm h2 {
+        font-size: .9em;
+    }
+
+    header nav {
+        padding: 0;
+        width: 200px;
+    }
+
+    header nav ul {
+        font-size: .6em;
+    }
+
+    header nav ul li #logout {
+        padding: 6px;
+    }
+
+    .container header {
+        padding: 15px 10px;
+    }
+
+    main .listCard {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    main .listCard .card {
+        width: 165px;
+        height: 288px;
+    }
+
+    main .listCard .card a .think {
+        font-size: .6em;
+    }
+
+    main .listCard .card img {
+        height: 195px;
+    }
+
+    main .listCard .card h2 {
+        font-size: .85em;
+    }
+
+    main .listCard .card a ul li {
+        font-size: .5em;
+    }
+
+    .rating {
+        font-size: 1.2em;
+        top: 3em;
+        /* right: -10px; */
+    }
+
+        #rate {
+            top: -4px;
+        }
+
+    footer {
+        height: 180px;
+    }
+
+    footer ul {
+        margin-left: 5px;
+        font-size: .7em;
+    }
+
+    footer ul li {
+        margin-top: 5px;
+        font-size: .8em;
+    }
+
+    footer div {
+        font-size: .8em;
+        width: 260px;
+    }
+
+    main .book span { 
+        width: 70%;
+    }
+
+        main .book span p {
+            font-size: .8em;
+        }
+
+    main .book span img {
+        width: 130px;
+    }
+
+        #borrow-mdlg,
+        #borrow-flsft,
+        #borrow-phlsphy,
+        #borrow-swg,
+        #borrow-pltcs,
+        #borrow-shphy {
+            left: 40%;
+            bottom: 18%;
+        }
 }
