@@ -17,7 +17,7 @@
             scroll-behavior: smooth;
             scrollbar-width: none;
             text-decoration: none;
-            font-family: 'Rubik', serif;
+            font-family: 'Rubik', Arial, Helvetica, sans-serif;
         }
 
         body {
@@ -96,6 +96,26 @@
             color: white;
             border: 1px solid white;
         }
+
+        @media screen and (max-width: 430px) {
+            .container .library {
+                flex-direction: column
+            }
+
+            .intro h1 {
+                font-size: .95em;
+            }
+
+            .container .library .intro .btn {
+                justify-content: center;
+                margin-top: .5em;
+            }
+
+            .container img {
+                width: 180px;
+            }
+        }
+
     </style>
 </head>
 
