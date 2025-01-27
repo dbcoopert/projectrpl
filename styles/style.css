@@ -287,4 +287,8 @@ footer ul li a {
         width: 260px;
     }
 
+    main h1 {
+    font-size: 1em;
+    }
+
 }
