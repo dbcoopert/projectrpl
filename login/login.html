@@ -21,7 +21,7 @@
                     padding: 0;
                     margin: 0;
                     box-sizing: border-box;
-                    font-family: 'Rubik', serif;
+                    font-family: 'Rubik', Arial, Helvetica, sans-serif;
                     letter-spacing: 1px;
                 }
 
@@ -207,6 +207,48 @@
                     top: -7px;
                     cursor: pointer;
                 }
+
+                @media screen and (max-width: 430px) {
+                    body {
+                        background-color: white;
+                    }
+
+                    .container {
+                       font-size: 1.3em;
+                       height: fit-content;
+                       box-shadow: none;
+                    }
+
+                    .container #formLogin img, .container #formLogin h3 {
+                        position: relative;
+                        font-size: 1.2em;
+                        top: -1.5em;
+                    }
+
+                    .container #formLogin img {
+                        width: 200px;
+                    }
+
+                    .container #formLogin img {
+                        top: -2em
+                    }
+
+                    .container > a {
+                        bottom: 0;
+                        top: 96%;
+                        right: 38%;
+                    }
+
+                    #err {
+                        bottom: -1.8em;
+                        font-size: .5em;
+                    }
+                }
+
+                #registrasi {
+                    width: 85%;
+                }
+
             </style>
         </head>
         </style>
@@ -271,7 +313,7 @@
                 window.open('../dashboard/kategori.html', '_blank')
                 err.style.display = 'none'
             } else {
-                err.innerText = 'KATA SANDI ATAU NIM ANDA SALAH !!!'
+                err.innerText = 'KATA SANDI ATAU EMAIL SALAH !!!'
                 err.style.display = 'inline'
             }
         })
